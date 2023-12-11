@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  {%load static%}
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+<h1>Movie information</h1>
+{% if Movie %}
+<table>
+<thead>
+<th>released date</th>
+<th>movie name</th>
+<th>hero</th>
+<th>heroine</th>
+<th>rating</th>
+</thead>
+{% for movie in Movie %}
+<tr>
+<td>{{movie.rdate}}</td>
+<td>{{movie.moviename}}</td>
+<td>{{movie.hero}}</td>
+<td>{{movie.heroine}}</td>
+<td>{{movie.rating}}</td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>no movie found</p>
+{%endif%}
+</body>
+</html>

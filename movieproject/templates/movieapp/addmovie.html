@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<!-- css file add panu -->
+<!--movie.css files add panu -->
+<title></title>
+</head>
+<body>
+<div class="container" align="center">
+<h1>ADD MOVIE INFO</h1>
+<form method="post">
+{{form.as_p}}
+{%csrf_token%}
+<input type="submit" class="btn btn-primary' value="Add Movie">
+</form>
+</div>
+</body>
+</html>
